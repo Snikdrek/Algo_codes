@@ -1,0 +1,1 @@
+{"name":"Local: dp_coin_change_1","url":"e:\\ProvatSirAlgo\\dp_coin_change_1.cpp","tests":[{"id":1735627348113,"input":"4 20\n2\n15\n17\n3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\ProvatSirAlgo\\dp_coin_change_1.cpp","group":"local","local":true}

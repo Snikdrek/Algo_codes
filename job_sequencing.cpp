@@ -1,57 +1,63 @@
 #include<bits/stdc++.h>
-#define ll long long
-#define pb push_back
-#define pu pop_back
-#define N 1000
-#define mod 1000000000
 using namespace std;
-//job sequencing using greedy approach and stl
-struct job 
-{
-    char jobid;
-    int deadline;
-    int profit;
+
+
+struct Job{
+	char a;
+	int dl , profit ;
+	
 };
-bool compare(job j1,job j2)
+
+bool cmp(Job a, Job b)
 {
-    return j1.profit>j2.profit;
-}
-int main()
-{
-    ll n;
-    cin>>n;
-    job jobs[n+4];
-    for(ll i=0;i<n;i++)
-    {
-        cin>>jobs[i].jobid>>jobs[i].deadline>>jobs[i].profit;
-    }
-    sort(jobs,jobs+n,compare);
-    int result[n+4];
-    bool slot[n+4];
-    for(ll i=0;i<n;i++)
-    {
-        slot[i]=false;
-    }
-    for(ll i=0;i<n;i++)
-    {
-        for(ll j=min(n,(ll)jobs[i].deadline)-1;j>=0;j--)
-        {
-            if(slot[j]==false)
-            {
-                result[j]=i;
-                slot[j]=true;
-                break;
-            }
-        }
-    }
-    for(ll i=0;i<n;i++)
-    {
-        if(slot[i])
-        {
-            cout<<jobs[result[i]].jobid<<" ";
-        }
-    }
-    cout<<endl;
-    return 0;
+	return a.profit > b.profit;
 }
 
+
+int main()
+{
+   int n;
+   cin >>  n;
+   
+   
+   Job job[n+5];
+   
+   for(int i = 0 ; i < n; i++)
+   {
+   	cin >> job[i].a >> job[i].dl >> job[i].profit;
+   }
+   
+   sort(job , job + n , cmp);
+   
+   vector<char>ans;
+   
+    
+   int pr = 0 ;
+   
+   vector<bool>slot(n,0);
+   
+   for(int i = 0 ; i < n ; i++ )
+   {
+   	   for(int j = min(n,job[i].dl) - 1; j >= 0 ; j--)
+   	   {
+   	   	if(!slot[j])
+   	   	{
+   	   		slot[j] = 1;
+   	   		pr+=job[i].profit;
+   	   		ans.push_back(job[i].a);
+   	   		break;
+		}
+		}
+   }
+   
+   
+   cout << pr << endl;
+   
+   for(int i = 0 ; i < ans.size(); i++)
+   {
+   	cout << ans[i] << " ";
+   }
+   cout << endl;   
+	
+		
+}

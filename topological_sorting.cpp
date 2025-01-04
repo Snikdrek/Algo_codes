@@ -10,7 +10,7 @@ int main()
    ll n,m;
 
    cin>>n>>m;
-   vector<ll>v[n];
+   vector<vector<ll>>v(n);
    vector<ll>indegree(n,0);
    for(ll i=0;i<m;i++)
    {

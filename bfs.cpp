@@ -6,11 +6,13 @@
 using namespace std;
 vector<ll>v[N];
 bool visited[N];
+vector<ll>dist(N,-1);
 void bfs(ll vertex)
 {
  queue<ll>qu;
  qu.push(vertex);
  visited[vertex]=true;
+ dist[vertex]=0;
  while(!qu.empty())
  {
     ll cur=qu.front();
@@ -23,6 +25,7 @@ void bfs(ll vertex)
         {
             qu.push(child);
             visited[child]=true;
+            dist[child] = dist[cur] + 1;
         }
     }
  }
@@ -40,6 +43,9 @@ int main()
         v[v2].pb(v1);
     }
     bfs(1);
-    
+    for(ll i=1;i<n;i++)
+    {
+        cout<<dist[i]<<endl;
+    }
     return 0;
 }

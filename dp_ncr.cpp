@@ -16,11 +16,12 @@ ll ncr(ll n,ll r)
       --------
       r!(n-r)!
    */
-  if(n<r or n<0 or r<0)
+
+  if( n<0 )
   {
     return 0;
   }
-  if(r==0 or n==r)
+    if(r==0)
   {
     return 1;
   }

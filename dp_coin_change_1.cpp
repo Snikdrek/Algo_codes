@@ -9,15 +9,16 @@ vector<ll>coins(N);
 ll dp[N][N];
 ll coins1(ll coinidx,ll remaining)
 {
+    if(remaining==0)
+    {
+        return 0;
+    }
     if(remaining<0)
     {
         return N;
     }
     
-    if(remaining==0)
-    {
-        return 0;
-    }
+    
     if(coinidx>n)
     {
         return N;

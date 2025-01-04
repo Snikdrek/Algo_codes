@@ -45,7 +45,7 @@ int main()
    	   		slot[j] = 1;
    	   		pr+=job[i].profit;
    	   		ans.push_back(job[i].a);
-   	   		break;
+   	   		break;//break because we can only assign one job to a slot
 		}
 		}
    }

@@ -1,1 +1,1 @@
-{"name":"Local: job_sequencing","url":"e:\\ProvatSirAlgo\\job_sequencing.cpp","tests":[{"id":1735807914312,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\ProvatSirAlgo\\job_sequencing.cpp","group":"local","local":true}
+{"name":"Local: job_sequencing","url":"e:\\ProvatSirAlgo\\job_sequencing.cpp","tests":[{"id":1735807914312,"input":"5\nA 2 100\nB 1 19\nC 2 27\nD 1 25\nE 3 15\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\ProvatSirAlgo\\job_sequencing.cpp","group":"local","local":true}

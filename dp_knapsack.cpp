@@ -10,13 +10,14 @@ ll value[N];
 ll n;
 ll knapans(ll curr,ll capacity)// curr currently koita neya hoise
 {
-    if(capacity<0)
-    {
-        return (ll)(-1e9);//returning negative infinity because we can't take negative weight and not positve infinity because we can't take infinite weight
-    }
-    if(curr>=n)
+  
+    if(curr==n)
     {
         return 0;
+    }
+      if(capacity<0)
+    {
+        return (ll)(-1e9);//returning negative infinity because we can't take negative weight and not positve infinity because we can't take infinite weight
     }
     ll ans=-1;
     if(dp[curr][capacity]!=-1)

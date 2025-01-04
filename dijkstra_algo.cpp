@@ -29,15 +29,10 @@ void dijkstra(ll vertex)
               if(dist[child]>dist[cur]+weight)
               {
                     dist[child]=dist[cur]+weight;
-                    pq.push({-dist[child],child});//priority queue is max heap so we have to make it min heap by adding -ve sign to distance
-                    
+                    pq.push({-dist[child],child});//priority queue is max heap so we have to make it min heap by adding -ve sign to distance     
               }
-
         }
-
-
     }
-    
 }
 int main()
 {

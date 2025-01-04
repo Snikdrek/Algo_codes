@@ -5,7 +5,7 @@
 #define N 1000000
 
 using namespace std;
-vector<ll>v[N];
+vector<vector<ll>>v;
 bool visited[N];
 void dfs(ll ver)
 {
@@ -25,6 +25,7 @@ void dfs(ll ver)
 }
 int main()
 {
+    v.resize(N);
     ll ve,e;
     cin>>ve>>e;
     for(ll i=0;i<e;i++)
